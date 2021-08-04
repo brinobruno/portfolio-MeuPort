@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale:1.0">
+    <meta charset="UTF-8">
+    <title>MeuPort - Contato</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <section class="contact-header">
+        <nav>
+            <a href="index.html"><img src= "images/logo.png"></a>
+            <div class="nav-links" id ="navLinks">   <!-- id com L maiusculo -->
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">.inicio()</a></li>
+                    <li><a href="pessoal.html">.pessoal()</a></li>
+                    <li><a href="profissional.html">.profissional()</a></li>
+                    <li><a href="contato.html">.contato()</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+    <div class="Principal">
+            <h1>.contato()</h1>
+    </div>
+</section>
+
+<!--------- contact --------->
+
+<section class="contact-form">
+    <div class="fade-in">
+        <div class="title-contact">
+            <h1>Entre em contato por aqui!</h1>
+        </div>
+        <div class="row1">
+            <div class="contact-col">
+                <div>
+                        <h5><i class="fa fa-home"></i>São José dos Campos</h5>
+                </div>
+                <div>
+                        <h5><i class="fa fa-whatsapp"></i>+55 (12)98898-1915</h5>
+                </div>
+                <div>
+                        <h5><i class="fa fa-envelope-o"></i>brunosantos6ft@gmail.com</h5>
+                </div>
+            </div>
+            <div class="contact-col1">
+                <form action="contact-form.php" method="POST">
+                    <input type="text" name="name" placeholder="Insira seu nome" required>  
+                    <input type="email" name="email" placeholder="Insira seu e-mail" required>
+                    <input type="text" name="subject" placeholder="Insira o assunto" required>
+                    <textarea rows="6" name="message" placeholder="Mensagem" required></textarea>
+                    <button type="submit" class="hero-btn-pink">Enviar mensagem</button>
+                </form>
+            </div>
+            </div>
+        </div>
+
+</section>
+
+<section class="location">
+
+    <div class="fade-in">
+        <div class="location1">
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29326.12545101649!2d-45.90471901877651!3d-23.251612329587967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cdb54afdc93553%3A0xf5764cd331e757e6!2sBosque%20dos%20Eucaliptos%2C%20S%C3%A3o%20Jos%C3%A9%20dos%20Campos%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1625705947429!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+        </div>
+    </div>
+
+</section>
+
+
+<!-------- footer ---------->
+
+<section class="footer">
+
+    <div class="fade-in">
+        <div class="footer1">
+        <h4>Acompanhe meu progresso</h4>
+        </div>
+
+        <div class="icons">
+            <a href="https://www.linkedin.com/in/brunociao/"><i class="fa fa-linkedin-square"></i></a>
+            <a href="https://github.com/brinobruno"><i class="fa fa-github"></i></a>
+            <a href="https://www.behance.net/brunobrino"><i class="fa fa-behance"></i></a>
+        </div>
+        <div class="end">
+            <p><i class="fa fa-copyright"></i>  2021 Bruno Corrêa</p>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- Js para setar o menu p direita -->
+
+<script>
+    
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu () {
+        navLinks.style.right = "0"
+    }
+
+    function hideMenu () {
+        navLinks.style.right = "-400px"
+    }
+
+</script>
+
+<script>
+
+    const faders = document.querySelectorAll('.fade-in')
+
+    const appearOptions = {
+        threshold: 1,
+        rootMargin: "0px 0px 120px 0px"   /* antes: 350 */
+    }
+
+    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+        entries.forEach(entry => {
+            if(!entry.isIntersecting) {
+                return
+            } else {
+                entry.target.classList.add('appear')
+                appearOnScroll.unobserve(entry.target)
+            }
+        })
+    }, appearOptions)
+
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader)
+    })
+
+</script>
+
+</body> 
+</html> 
