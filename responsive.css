@@ -292,14 +292,18 @@
 }
 
 @media (max-device-width: 470px) {
+    .galeria h1 {
+        font-size: 60px;
+    }
     .galeria p {
-        font-size: 18px;
+        font-size: 40px;
+        font-weight: 300;
     }
 }
 
 @media (max-device-width: 400px) {
     .galeria p {
-        font-size: 14px;
+        font-size: 40px;
     }
     .artist-title p {
         font-size: 20px;
@@ -375,9 +379,9 @@
     }
 }
 
-@media (max-device-width: 380px) {
+@media (max-device-width: 390px) {
     .coluna-review p {
-        font-size: 95px;
+        font-size: 300px;
         line-height: 130%;
     }
 }
@@ -398,4 +402,30 @@
     bottom: 49%;
     opacity: 1;
     }
+}
+
+@media screen and (max-device-width: 600px) {
+.layer:hover, .layer:active{
+    bottom: 49%;
+    opacity: 1;
+  }
+}
+
+
+@media only screen and (max-width: 500px) {
+    .galeria p {
+        font-size: 40px;
+    }
+}
+
+@media(hover: hover) and (pointer: fine) {
+    layer:hover {
+        background: rgba(235, 3, 61, 0.6);
+    }
+}
+@media(hover: hover) and (pointer: fine) {
+    .layer:hover h3 {
+        bottom: 49%;
+        opacity: 1;
+}
 }
