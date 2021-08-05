@@ -6,4 +6,4 @@
 
 ### Não estou 100% satisfeito com ele, tem muita coisa pra ser adicionada, porém, pra uma primeira versão, está bem legal!
 
-[preview]: https://blissful-ptolemy-7bc781.netlify.app/index.html
+[preview]: https://meuport.com/
